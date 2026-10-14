@@ -6,6 +6,7 @@ import ChapterTimeline from './components/ChapterTimeline';
 import PrivateStorageCard from './components/PrivateStorageCard';
 import UploadIntakeModal from './components/UploadIntakeModal';
 import CabModal from './components/CabModal';
+import OutcomeChart from './components/OutcomeChart';
 import Footer from './components/Footer';
 import { INITIAL_LOGS } from './data/mockMemoryLogs';
 
@@ -61,6 +62,11 @@ export default function App() {
           onSelectPreset={handleSelectPreset}
           onOpenUpload={() => setIsUploadOpen(true)}
         />
+
+        {/* Julien Bek $1:$6 Sequoia Framework + Bklit UI Outcome Engine */}
+        <section className="px-4 sm:px-6 lg:px-8">
+          <OutcomeChart onCtaClick={() => setIsCabOpen(true)} />
+        </section>
 
         {/* Core Conversational Search Engine */}
         <ConversationalSearch

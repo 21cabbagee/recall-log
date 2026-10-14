@@ -1,10 +1,12 @@
 import React from 'react';
 import { Search, Sparkles, Shield, Clock, Zap, ArrowRight } from 'lucide-react';
 import { PRESET_QUERIES } from '../data/mockMemoryLogs';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export default function Hero({ onSelectPreset, onOpenUpload }) {
   return (
     <section className="relative pt-12 pb-8 overflow-hidden">
+      <ParticlesCanvas color="99, 102, 241" />
       {/* Background glow orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-recall-600/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none" />
